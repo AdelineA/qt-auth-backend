@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const authRoutes = require("../src/routes/authroutes");
+const swaggerDocs = require("./swagger");
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -17,6 +19,9 @@ mongoose
   })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
+
 app.use("/api/auth", authRoutes);
+
+swaggerDocs(app);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
