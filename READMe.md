@@ -13,9 +13,7 @@ pnpm dev
 bun dev
 ```
 
-## create the .env file
+## check the running server on your browser
 
-- add the following in your readme
-  MONGO_URI = mongodb+srv://ademug:uqy8pa6fL7Oxwqlw@cluster0.ywquk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0;
-  JWT_SECRET=your_secret_key
-  PORT=5000
+- [localhost:5000](http://localhost:5000)
+- swagger doc: [localhost:5000/api/docs](http://localhost:5000/api-docs)
